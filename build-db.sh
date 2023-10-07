@@ -31,15 +31,11 @@ repo-add -s -n -R fluxrepo.db.tar.gz *.pkg.tar.zst
 
 # Removing the symlinks because GitLab can't handle them.
 rm fluxrepo.db
-rm fluxrepo.db.sig
 rm fluxrepo.files
-rm fluxrepo.files.sig
 
 # Renaming the tar.gz files without the extension.
 mv fluxrepo.db.tar.gz fluxrepo.db
-mv fluxrepo.db.tar.gz.sig fluxrepo-db.sig
 mv fluxrepo.files.tar.gz fluxrepo.files
-mv fluxrepo.files.tar.gz.sig fluxrepo.files.sig
 
 echo "#######################################"
 echo "Packages in the repo have been updated!"
